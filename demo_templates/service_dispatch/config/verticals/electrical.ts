@@ -1,0 +1,55 @@
+import type { VerticalPack } from "./types";
+
+export const electricalPack: VerticalPack = {
+  key: "electrical",
+  workerNoun: { singular: "electrician", plural: "electricians" },
+  jobNoun: { singular: "service call", plural: "service calls" },
+  tradeNoun: "electrical",
+  productTagline: "Service Operations",
+  ticketSources: [
+    { label: "Voicemail (Twilio)", icon: "phone", sampleCount: 3 },
+    { label: "Web form submissions", icon: "form", sampleCount: 6 },
+    { label: "Email (info@)", icon: "email", sampleCount: 2 },
+    { label: "ServiceTitan sync", icon: "platform", sampleCount: 2 },
+  ],
+  urgencyExamples: [
+    { label: "Sparking outlet", description: "Visible arcing reported, fire risk" },
+    { label: "No power", description: "Whole-house outage, food spoiling, medical equipment" },
+    { label: "Burning smell", description: "Reported from panel — dispatch immediately" },
+  ],
+  issueTypes: [
+    { label: "Outlet not working", category: "service" },
+    { label: "Light fixture replacement", category: "service" },
+    { label: "Ceiling fan install", category: "service" },
+    { label: "GFCI outlet replacement", category: "service" },
+    { label: "Switch replacement", category: "service" },
+    { label: "Tripping breaker", category: "service" },
+    { label: "Annual maintenance — panel inspection", category: "maintenance" },
+    { label: "Whole-house surge protector check", category: "maintenance" },
+    { label: "Generator service", category: "maintenance" },
+    { label: "Panel upgrade (200A)", category: "install" },
+    { label: "EV charger install", category: "install" },
+    { label: "Generator install", category: "install" },
+    { label: "Sub-panel install", category: "install" },
+    { label: "Emergency: sparking outlet", category: "emergency" },
+    { label: "Emergency: no power", category: "emergency" },
+    { label: "Emergency: burning smell from panel", category: "emergency" },
+  ],
+  skills: [
+    { label: "Master electrician", short: "Master" },
+    { label: "Journeyman electrician", short: "Journeyman" },
+    { label: "Panel upgrades", short: "Panel" },
+    { label: "EV charger install", short: "EV" },
+    { label: "Generator install (Generac certified)", short: "Generator" },
+    { label: "Low voltage", short: "Low voltage" },
+    { label: "Commercial electrical", short: "Commercial" },
+    { label: "Solar interconnect", short: "Solar" },
+  ],
+  typicalJobMinutes: 90,
+  commonStack: ["ServiceTitan", "FieldEdge", "Housecall Pro"],
+  heroCopy: {
+    headline: "Dispatch on autopilot. Your electricians stay on the job, not on the phone.",
+    subhead:
+      "Every morning, calls, web forms, and emails pile up. Someone spends two hours triaging, calling electricians, and shuffling the calendar before any wire gets pulled. We replaced that with one scheduled job.",
+  },
+};
